@@ -1,9 +1,9 @@
 import java.util.Scanner;
 
-public class starPattern7 {
+public class starPattern8 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int n = 5;
+        int n = sc.nextInt();
         for (int i = 1; i <= n; i++) {
             for (int j = n; j >= 1; j--) {
                 if (j > i) {
@@ -14,11 +14,5 @@ public class starPattern7 {
             }
             System.out.println();
         }
-    }
+    }  
 }
-// 5
-//     * 
-//    * *
-//   * * *
-//  * * * *
-// * * * * *
