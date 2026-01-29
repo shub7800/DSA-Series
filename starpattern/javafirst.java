@@ -1,3 +1,4 @@
+package starpattern;
 import java.util.Scanner;
 
 public class javafirst {
