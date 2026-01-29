@@ -1,48 +1,35 @@
 package BasicMaths;
-import java.util.Arrays;
 
-public class AllDisvisior {
-    /* Function to find all 
-    divisors of n */
-    public int[] divisors(int n) {
-        
-        // Initial size of the array is set to n
-        int[] temp = new int[n];
-        int count = 0;
-        
-        // Iterate from 1 to n
-        for (int i = 1; i <= n; i++) {
-            
-            // If a divisor is found
-            if (n % i == 0) {
-                // Add it to the array
-                temp[count++] = i;
+import java.util.*;
+
+
+class AllDivisors {
+    public static List<Integer> allDivisors(int n) {
+
+        List<Integer> list = new ArrayList<>();
+
+        for(int i = 1; i * i <= n; i++) {
+
+            if(n % i == 0) {
+
+                list.add(i);   // first divisor
+
+                if(i != n / i) {   // avoid duplicate for perfect square
+                    list.add(n / i);  // paired divisor
+                }
             }
         }
-        
-        /* Copy the divisors to an 
-        array of the exact size */
-        int[] ans = Arrays.copyOf(temp, count);
-        
-        // Return the result
-        return ans;
+
+        return list;
     }
 
     public static void main(String[] args) {
-        int n = 6;
-        
-        /* Creating an instance of 
-        Solution class */
-        AllDisvisior sol = new AllDisvisior();
-        
-        /* Function call to find 
-        all divisors of n */
-        int[] ans = sol.divisors(n);
-        
-        System.out.print("The divisors of " + n + " are: ");
-        for (int i = 0; i < ans.length; i++) {
-            System.out.print(ans[i] + " ");
-        }
+        int n = 36;
+
+        List<Integer> result = allDivisors(n);
+
+        Collections.sort(result); // optional (for ordered output)
+
+        System.out.println(result);
     }
 }
-
