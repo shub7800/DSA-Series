@@ -16,7 +16,7 @@ public class LinearSerach {
         if(index == -1){
             System.out.println("not found");
         }else{
-            System.out.println("found the key ");
+            System.out.println("found");
         }
 
 
