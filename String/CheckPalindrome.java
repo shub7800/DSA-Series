@@ -27,7 +27,7 @@ public class CheckPalindrome {
     }
 
     public static void main(String[] args) {
-        String str ="hello, how are you";
+        String str ="hello,how are you";
         boolean Palindrome=isPalindrome(str);
         System.out.println(Palindrome);
     }
