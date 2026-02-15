@@ -32,7 +32,7 @@ class Leetcode189 {
         rotate(nums, k);
 
         for (int num : nums) {
-            System.out.print(num + " ");
+            System.out.print(num + "  ");
         }
     }
 }
