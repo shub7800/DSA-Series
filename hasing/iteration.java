@@ -36,7 +36,7 @@ public class iteration {
         // 🔹 METHOD 2 : Iteration using entrySet()  (BEST METHOD)
         // =====================================================
 
-        System.out.println("\nUsing entrySet():");
+        System.out.println("\nUsing THE  entrySet():");
 
         // entrySet() returns set of key-value pairs
         for (Map.Entry<String, Integer> entry : hm.entrySet()) {
